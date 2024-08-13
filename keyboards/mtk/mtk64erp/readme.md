@@ -10,7 +10,7 @@ mtk64erp is homebrew keyboard with thumb operated trackball & rotary encoder.
     OLED    : SSD1306 128X64 
     Trackball sensor : PMW3389
     Encoder : EC12D
-* Hardware Availability: https://jp.mercari.com/search?keyword=mentako-ya
+* Hardware Availability: https://mentako-ya.myshopify.com/products/mtk64erp
 
 ## Manual
 https://github.com/mentako-ya/mtk64erp/blob/main/README.md
