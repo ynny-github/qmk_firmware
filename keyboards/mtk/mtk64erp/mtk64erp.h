@@ -16,7 +16,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
     L40, L41,                L51, L52,    R52, R51,                R41, R40, \
               L42,      L43,      L53,    R53,      R43,      R42,           \
 			                      L54,    R54,                               \
-         L60, L61, L62,                                  R62, R61, R60       \
+         L60, L61, L62,                                  R60, R61, R62       \
 	) \
     { \
         {   KC_NO, L01,   L02,   L03,   L04,   L05,   L06  }, \
