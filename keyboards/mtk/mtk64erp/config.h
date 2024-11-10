@@ -40,7 +40,7 @@
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE   // Enables auto mouse layer feature
 #define AUTO_MOUSE_DEFAULT_LAYER 7          // Index of layer to use as default target layer
 #define AUTO_MOUSE_TIME 1000                // Time layer remains active after activation
-#define AUTO_MOUSE_THRESHOLD 200            // Amount of mouse movement required to switch layers
+#define AUTO_MOUSE_THRESHOLD 100             // Amount of mouse movement required to switch layers
 #endif
 
 #define I2C1_SDA_PIN GP2
@@ -63,7 +63,7 @@
   #undef RGBLED_SPLIT
   #define RGBLED_SPLIT {7, 7}
 
-  #define RGBLIGHT_ANIMATIONS
+//  #define RGBLIGHT_ANIMATIONS
   #define RGBLIGHT_LAYERS
   #define RGBLIGHT_EFFECT_BREATHING
   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
