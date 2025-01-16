@@ -543,3 +543,24 @@ bool oled_task_kb(void) {
     return false;
 }
 #endif
+
+// extension
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HYPER:
+            if (record->event.pressed) {
+                register_code(KC_LCTL);
+                register_code(KC_LSFT);
+                register_code(KC_LALT);
+                register_code(KC_LGUI);
+            } else {
+                unregister_code(KC_LCTL);
+                unregister_code(KC_LSFT);
+                unregister_code(KC_LALT);
+                unregister_code(KC_LGUI);
+            }
+            return false;
+    }
+    return true;
+}
+// ----------------------------------------------------------------------------

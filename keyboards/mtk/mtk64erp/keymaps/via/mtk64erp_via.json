@@ -112,6 +112,11 @@
             "name": "AM\nTOUT_DEC",
             "title": "Decrement AUTO_MOUSE_TIME_OUT",
             "shortName": "AM_TO_OUT_DEC"
+        },
+        {
+            "name": "Hyper",
+            "title": "Hyper key(Shift+Ctrl+Alt+Super Key)",
+            "shortName": "HYPER"
         }
     ]
 }

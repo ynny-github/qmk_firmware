@@ -98,6 +98,9 @@ enum custom_keycodes {
     AM_TG,       //Toggle auto mouse layer
     AM_TOUT_INC,  //Increment AUTO_MOUSE_TIME_OUT
     AM_TOUT_DEC,  //Decrement AUTO_MOUSE_TIME_OUT
+
+    // extension
+    HYPER
 };
 
 //////////////////////////////////////////////////////////////////////////////
