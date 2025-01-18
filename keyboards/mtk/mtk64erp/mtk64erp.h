@@ -100,7 +100,6 @@ enum custom_keycodes {
     AM_TOUT_DEC,  //Decrement AUTO_MOUSE_TIME_OUT
 
     // extension
-    HYPER
 };
 
 //////////////////////////////////////////////////////////////////////////////
