@@ -252,22 +252,14 @@ __attribute__((weak)) bool auto_mouse_activation(report_mouse_t mouse_report) {
  */
 void pointing_device_task_auto_mouse(report_mouse_t mouse_report) {
     // skip if disabled, delay timer running, or debounce
-    if (!(AUTO_MOUSE_ENABLED) || timer_elapsed(auto_mouse_context.timer.active) <= auto_mouse_context.config.debounce || timer_elapsed(auto_mouse_context.timer.delay) <= AUTO_MOUSE_DELAY) {
+    if (!(AUTO_MOUSE_ENABLED) || layer_state_is((AUTO_MOUSE_TARGET_LAYER))) {
         return;
     }
     // update activation and reset debounce
     auto_mouse_context.status.is_activated = auto_mouse_activation(mouse_report);
     if (is_auto_mouse_active()) {
         auto_mouse_context.total_mouse_movement = (total_mouse_movement_t){.x = 0, .y = 0, .h = 0, .v = 0};
-        auto_mouse_context.timer.active         = timer_read();
-        auto_mouse_context.timer.delay          = 0;
-        if (!layer_state_is((AUTO_MOUSE_TARGET_LAYER))) {
-            layer_on((AUTO_MOUSE_TARGET_LAYER));
-        }
-    } else if (layer_state_is((AUTO_MOUSE_TARGET_LAYER)) && timer_elapsed(auto_mouse_context.timer.active) > auto_mouse_context.config.timeout) {
-        layer_off((AUTO_MOUSE_TARGET_LAYER));
-        auto_mouse_context.timer.active         = 0;
-        auto_mouse_context.total_mouse_movement = (total_mouse_movement_t){.x = 0, .y = 0, .h = 0, .v = 0};
+        layer_on((AUTO_MOUSE_TARGET_LAYER));
     }
 }
 
